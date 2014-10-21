@@ -1,0 +1,13 @@
+Device PIC24EP128GP204
+Hwtool SIM
+set oscillator.frequency 50
+set oscillator.frequencyunit Mega
+set oscillator.rcfrequency 250
+set oscillator.rcfrequencyunit Kilo
+Set uart1io.uartioenabled true
+Set uart1io.output file
+Set uart1io.outputfile "test/simulation/out.txt"
+Program "build/release/TestBuild.out"
+Run
+Sleep 1000
+Quit
